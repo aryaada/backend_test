@@ -1,6 +1,6 @@
 # Backend Test
 
-## Prerequisites
+## Using For Test Case
 
 - Express.js
 - DDD Pattern
@@ -13,13 +13,19 @@
    ```bash
    git clone https://github.com/aryaada/backend_test.git
 
-2. Install Dependencies
+2. Import Database
+    ```bash
+    library.sql
+
+3. Install Dependencies
     ```bash
     npm install
 
-3. Create .env
+4. Create .env
     ```bash
     DB_HOST=localhost
     DB_USER=root
     DB_PASS=
     DB_NAME=library
+
+
