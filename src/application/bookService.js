@@ -42,7 +42,7 @@ class BookService {
         });
 
         if (memberPenalties.length > 0) {
-            throw new Error('Member is currently penalized and cannot borrow books');
+            throw new Error('Member saat ini dikenakan penalty dan tidak dapat meminjam buku');
         }
 
         const activeBorrows = await BorrowModel.count({
@@ -55,12 +55,12 @@ class BookService {
         });
 
         if (activeBorrows >= 2) {
-            throw new Error('Member can only borrow up to 2 books at a time');
+            throw new Error('Member hanya dapat meminjam maksimal 2 buku');
         }
 
         const book = await BookModel.findOne({ where: { code: bookCode } });
         if (!book) {
-            throw new Error('Book does not exist');
+            throw new Error('Buku tidak ada');
         }
 
         const existingBorrow = await BorrowModel.findOne({
@@ -73,7 +73,7 @@ class BookService {
         });
 
         if (existingBorrow) {
-            throw new Error('Book is already borrowed by another member');
+            throw new Error('Buku sudah dipinjam oleh member lain');
         }
 
         await BorrowModel.create({ memberCode, bookCode });
@@ -91,7 +91,7 @@ class BookService {
         });
 
         if (!borrow) {
-            throw new Error('This book was not borrowed by the member');
+            throw new Error('Buku ini tidak dipinjam oleh member ini');
         }
 
         borrow.returnDate = returnDate;

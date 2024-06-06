@@ -2,7 +2,7 @@ const request = require('supertest');
 const app = require('../src/app');
 
 describe('POST /api/books/return', () => {
-    test('It should respond with 200 OK and success message when returning a book', async () => {
+    test('Response 200 ok', async () => {
         const requestData = {
             memberCode: 'M001',
             bookCode: 'TW-11'

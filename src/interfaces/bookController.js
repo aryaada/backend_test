@@ -62,7 +62,7 @@ router.post('/books/borrow', async (req, res) => {
     const { memberCode, bookCode } = req.body;
     try {
         await BookService.borrowBook(memberCode, bookCode);
-        res.status(200).send('Book borrowed successfully');
+        res.status(200).send('Buku berhasil dipinjam');
     } catch (error) {
         res.status(400).send(error.message);
     }
@@ -95,7 +95,7 @@ router.post('/books/return', async (req, res) => {
     const { memberCode, bookCode, returnDate } = req.body;
     try {
         await BookService.returnBook(memberCode, bookCode, returnDate);
-        res.json({ message: 'Book returned successfully' });
+        res.json({ message: 'Buku berhasil dikembalikan' });
     } catch (error) {
         res.status(400).send(error.message);
     }

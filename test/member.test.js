@@ -2,7 +2,7 @@ const request = require('supertest');
 const app = require('../src/app');
 
 describe('GET /api/members', () => {
-    test('It should respond with JSON containing a list of members', async () => {
+    test('Response 200 ok', async () => {
         const response = await request(app).get('/api/members');
         expect(response.statusCode).toBe(200);
         expect(response.body).toEqual(expect.any(Array));

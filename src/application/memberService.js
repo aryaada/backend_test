@@ -50,7 +50,7 @@ class MemberService {
         });
 
         if (!member) {
-            throw new Error('Member does not exist');
+            throw new Error('Member tidak ada');
         }
 
         const memberDetails = {
