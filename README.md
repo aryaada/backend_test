@@ -1,22 +1,25 @@
-# Library Management System
-
-This is a simple library management system built with Node.js, Express, Sequelize (with MySQL), and Swagger for API documentation.
-
-## Features
-
-- Members can borrow books with certain conditions
-- Books can be returned with penalties for late returns
-- API to check available books
-- API to check member details and their borrowed books
-- Swagger API documentation
+# Backend Test
 
 ## Prerequisites
 
-- Node.js
+- Express.js
+- DDD Pattern
+- Unit Testing
 - MySQL
 
 ## Installation
 
-1. Clone the repository:
+1. Clone repository:
    ```bash
-   git clone https://github.com/yourusername/library-management-system.git
+   git clone https://github.com/aryaada/backend_test.git
+
+2. Install Dependencies
+    ```bash
+    npm install
+
+3. Create .env
+    ```bash
+    DB_HOST=localhost
+    DB_USER=root
+    DB_PASS=
+    DB_NAME=library
