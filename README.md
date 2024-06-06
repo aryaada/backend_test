@@ -21,13 +21,20 @@
     ```bash
     npm install
 
-4. Start Test with Swagger API Documentation
+4. Config .env
+    ```bash
+    DB_HOST=localhost
+    DB_USER=root
+    DB_PASS=
+    DB_NAME=library
+
+5. Start Test with Swagger API Documentation
     ```bash
     node src/server.js
 
     http://localhost:3000/api-docs/
 
-5. Start Test with Unit Testing
+6. Start Test with Unit Testing
 
     ```bash
     npm test test/member.test.js
